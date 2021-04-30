@@ -12,6 +12,6 @@ class DatabaseConnection{
   }
 
   _onCreatingDatabase(Database database, int version) async {
-    await database.execute("CREATE TABLE contas(id INTEGER PRIMARY KEY, nome TEXT, valor TEXT, data TEXT)");
+    await database.execute("CREATE TABLE contas(id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, valor TEXT, data TEXT)");
   }
 }
